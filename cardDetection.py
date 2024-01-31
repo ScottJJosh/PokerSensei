@@ -33,9 +33,9 @@ if cap.isOpened():
                 for c in cnts:
                     area = cv2.contourArea(c)
                     if area > threshold_min_area and area < threshold_max_area:
-                        #cv2.drawContours(image, [c], 0, (36,255,12), 3)
-                        x,y,w,h = cv2.boundingRect(c)
-                        cv2.rectangle(image, (x, y), (x+w, y+h), (255, 0, 255), 3)
+                        cv2.drawContours(image, [c], 0, (36,255,12), 3)
+                        # x,y,w,h = cv2.boundingRect(c)
+                        # cv2.rectangle(image, (x, y), (x+w, y+h), (255, 0, 255), 3)
                         number_of_contours += 1
 
                 print("Contours detected:", number_of_contours)
